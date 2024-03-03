@@ -22,8 +22,8 @@ For the moment you can refer to LinkedIn, GitHub or Google Scholar.
 [//]: # (- **[Mar. 2019]** Our paper about few-shot learning is accepted to CVPR 2019.)
 
 ## Publications
-[//]: # ()
-[//]: # ({% include_relative _includes/publications.md %})
 
-[//]: # ()
-[//]: # ({% include_relative _includes/services.md %})
+{% include_relative _includes/publications.md %}
+
+
+{% include_relative _includes/services.md %}
