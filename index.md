@@ -24,4 +24,4 @@ For the moment you can refer to LinkedIn, GitHub or Google Scholar.
 {% include_relative _includes/publications.md %}
 
 
-{% include_relative _includes/services.md %}
+[//]: # ({% include_relative _includes/services.md %})
