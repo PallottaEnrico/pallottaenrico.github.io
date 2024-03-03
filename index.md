@@ -4,7 +4,8 @@ layout: homepage
 
 ## About Me
 
-[//]: # (I am a Ph.D. student at ...)
+Hi! Welcome to this page. I'm currently working on it, soon you will find all the information about me.
+For the moment you can refer to LinkedIn, GitHub or Google Scholar.
 
 ## Research Interests
 
