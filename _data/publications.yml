@@ -4,7 +4,7 @@ main:
     authors: Michael Bosello, Davide Aguiari, Yvo Keuter, <strong>Enrico Pallotta</strong>, Sara Kiade, Gyordan Caminati, Flavio Pinzarrone, Junaid Halepota, Jacopo Panerati, Giovanni Pau
     conference_short: RA-L
     conference: IEEE Robotics and Automation Letters <strong>(RA-L)</strong>, 2024, Vol. 9 num. 4, pages 3799-3806.
-    pdf: https://arxiv.org/pdf/2311.02667.pdf
+    pdf: https://ieeexplore.ieee.org/document/10452776
     code: https://github.com/tii-racing/drone-racing-dataset
 #    bibtex: https://bib.yliu.me/MICCAI23.txt
 #    bibtex:
