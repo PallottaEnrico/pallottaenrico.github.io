@@ -12,7 +12,7 @@ main:
 #    notes:
 
   - title: "TeamUnibo at SemEval-2023 Task 6: A transformer based approach to Rhetorical Roles prediction and NER in Legal Texts"
-    authors: Yuri Noviello, <strong>Enrico Pallotta</strong>, Flavio Pinzarrone, Giuseppe Tanzi
+    authors: * Yuri Noviello, * <strong>Enrico Pallotta</strong>, * Flavio Pinzarrone, * Giuseppe Tanzi
     conference_short: SemEval-2023
     conference: Proceedings of the 17th International Workshop on Semantic Evaluation (SemEval-2023), pages 275–284, Toronto, Canada. Association for Computational Linguistics.
     pdf: https://aclanthology.org/2023.semeval-1.37.pdf
@@ -20,4 +20,4 @@ main:
     #    bibtex: https://bib.yliu.me/MICCAI23.txt
     bibtex:
     image: ./assets/img/semeval.png
-    notes:
+    notes: * Equal contribution
