@@ -7,9 +7,9 @@ main:
     pdf: https://ieeexplore.ieee.org/document/10452776
     code: https://github.com/tii-racing/drone-racing-dataset
 #    bibtex: https://bib.yliu.me/MICCAI23.txt
-#    bibtex:
+    bibtex:
     image: ./assets/img/drone_dataset.png
-#    notes:
+    notes:
 
   - title: "TeamUnibo at SemEval-2023 Task 6: A transformer based approach to Rhetorical Roles prediction and NER in Legal Texts"
     authors: * Yuri Noviello, * <strong>Enrico Pallotta</strong>, * Flavio Pinzarrone, * Giuseppe Tanzi
