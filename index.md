@@ -4,12 +4,13 @@ layout: homepage
 
 ## About Me
 
-Hi! Welcome to this page. I'm currently working on it, soon you will find all the information about me.
-For the moment you can refer to LinkedIn, GitHub or Google Scholar.
+I'm currently a Ph.D. student at the University of Bonn, advised by [Prof. Dr. Jürgen Gall](http://gall.cv-uni-bonn.de/).
+My research is currently focused on video generation and prediction, multi-modal learning, and world models.
+I'm also working on agriculture application of video prediction models for crop monitoring and forecasting as part of the [AID4Crops project](https://aid4crops.uni-bonn.de/index.html). 
 
 ## Research Interests
 
-- **Computer Vision:** object pose estimation, robotics perception, video frame forecasting
+- **Computer Vision:** Video generation, video prediction, multi-modal learning, world models.
 
 ## News
 
