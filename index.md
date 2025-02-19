@@ -10,7 +10,7 @@ My research focuses on video generation and prediction, multi-modal learning, an
 
 I'm also working on agriculture application of video prediction models for crop monitoring and forecasting as part of the [AID4Crops project](https://aid4crops.uni-bonn.de/index.html). 
 
-Please feel free to [contact me](pallotta@iai.uni-bonn.de) if you have any questions or collaboration ideas.
+Please feel free to [contact me](mailto:pallotta@iai.uni-bonn.de) if you have any questions or collaboration ideas.
 ## Research Interests
 
 - **Computer Vision:** Video generation, video prediction, multi-modal learning, world models.
