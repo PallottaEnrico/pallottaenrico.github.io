@@ -5,9 +5,12 @@ layout: homepage
 ## About Me
 
 I'm currently a Ph.D. student at the University of Bonn, advised by [Prof. Dr. Jürgen Gall](http://gall.cv-uni-bonn.de/).
-My research is currently focused on video generation and prediction, multi-modal learning, and world models.
+
+My research focuses on video generation and prediction, multi-modal learning, and world models.
+
 I'm also working on agriculture application of video prediction models for crop monitoring and forecasting as part of the [AID4Crops project](https://aid4crops.uni-bonn.de/index.html). 
 
+Please feel free to [contact me](pallotta@iai.uni-bonn.de) if you have any questions or collaboration ideas.
 ## Research Interests
 
 - **Computer Vision:** Video generation, video prediction, multi-modal learning, world models.
