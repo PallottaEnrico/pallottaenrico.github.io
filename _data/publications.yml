@@ -6,6 +6,7 @@ main:
     pdf: "Coming soon"
     code: "Coming soon"
     project: https://pallottaenrico.github.io/SyncVP.github.io/
+    image: ./assets/img/teaser_syncvp.png
   - title: "Race Against the Machine: a Fully-annotated, Open-design Dataset of Autonomous and Piloted High-speed Flight"
     authors: Michael Bosello, Davide Aguiari, Yvo Keuter, <strong>Enrico Pallotta</strong>, Sara Kiade, Gyordan Caminati, Flavio Pinzarrone, Junaid Halepota, Jacopo Panerati, Giovanni Pau
     conference_short: RA-L
