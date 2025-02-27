@@ -17,6 +17,8 @@ Please feel free to [contact me](mailto:pallotta@iai.uni-bonn.de) if you have an
 
 ## News
 
+- **[Feb. 2025]** Our paper "SyncVP: Joint Diffusion for Synchronous Multi-Modal Video Prediction" has been accepted to CVPR 2025.
+
 - **[Feb. 2024]** Our paper about a new racing drone dataset is accepted to IEEE Robotics and Automation Letters (RA-L).
 
 [//]: # (- **[Feb. 2020]** We will host the ACM Multimedia Asia 2020 conference in Singapore!)
