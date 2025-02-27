@@ -1,5 +1,11 @@
 main:
-
+  - title: "SyncVP: Joint Diffusion for Synchronous Multi-Modal Video Prediction"
+    authors: <strong>Enrico Pallotta</strong>, Sina Mokhtarzadeh Azar, Shuai Li, Olga Zatsarynna, Jürgen Gall.
+    conference_short: CVPR 2025
+    conference: Computer Vision and Pattern Recognition <strong>(CVPR)</strong>, 2025.
+    pdf: "Coming soon"
+    code: "Coming soon"
+    project: https://pallottaenrico.github.io/SyncVP.github.io/
   - title: "Race Against the Machine: a Fully-annotated, Open-design Dataset of Autonomous and Piloted High-speed Flight"
     authors: Michael Bosello, Davide Aguiari, Yvo Keuter, <strong>Enrico Pallotta</strong>, Sara Kiade, Gyordan Caminati, Flavio Pinzarrone, Junaid Halepota, Jacopo Panerati, Giovanni Pau
     conference_short: RA-L
