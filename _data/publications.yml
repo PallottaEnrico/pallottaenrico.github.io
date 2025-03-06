@@ -4,6 +4,7 @@ main:
     conference_short: CVPR 2025
     conference: Computer Vision and Pattern Recognition <strong>(CVPR)</strong>, 2025.
     code: https://pallottaenrico.github.io/SyncVP.github.io/
+    pdf: https://pallottaenrico.github.io/SyncVP.github.io/
     notes: "Code and Paper coming soon."
     image: ./assets/img/teaser_syncvp.png
   - title: "Race Against the Machine: a Fully-annotated, Open-design Dataset of Autonomous and Piloted High-speed Flight"
