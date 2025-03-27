@@ -3,8 +3,8 @@ main:
     authors: <strong>Enrico Pallotta</strong>, Sina Mokhtarzadeh Azar, Shuai Li, Olga Zatsarynna, Jürgen Gall.
     conference_short: CVPR 2025
     conference: Computer Vision and Pattern Recognition <strong>(CVPR)</strong>, 2025.
-    code: https://pallottaenrico.github.io/SyncVP.github.io/
-    pdf: https://pallottaenrico.github.io/SyncVP.github.io/
+    code: https://github.com/PallottaEnrico/SyncVP
+    pdf: https://arxiv.org/abs/2503.18933
     notes: "Code and Paper coming soon."
     image: ./assets/img/teaser_syncvp.png
   - title: "Race Against the Machine: a Fully-annotated, Open-design Dataset of Autonomous and Piloted High-speed Flight"
