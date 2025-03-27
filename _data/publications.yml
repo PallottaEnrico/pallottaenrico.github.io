@@ -5,8 +5,8 @@ main:
     conference: Computer Vision and Pattern Recognition <strong>(CVPR)</strong>, 2025.
     code: https://github.com/PallottaEnrico/SyncVP
     pdf: https://arxiv.org/abs/2503.18933
-    notes: "Code and Paper coming soon."
     image: ./assets/img/teaser_syncvp.png
+    notes:
   - title: "Race Against the Machine: a Fully-annotated, Open-design Dataset of Autonomous and Piloted High-speed Flight"
     authors: Michael Bosello, Davide Aguiari, Yvo Keuter, <strong>Enrico Pallotta</strong>, Sara Kiade, Gyordan Caminati, Flavio Pinzarrone, Junaid Halepota, Jacopo Panerati, Giovanni Pau
     conference_short: RA-L
