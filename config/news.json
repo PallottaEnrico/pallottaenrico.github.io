@@ -1,0 +1,22 @@
+{
+  "_comment": "News Configuration - Edit this file to add news items",
+  
+  "news": [
+    {
+      "date": "Nov. 2025",
+      "text": "\uD83C\uDF1F Check out our new work: '<a href=https://cvg-bonn.github.io/EgoControl/>EgoControl</a>: Controllable Egocentric Video Generation via 3D Full-Body Poses'"
+    },
+    {
+      "date": "Mar. 2025",
+      "text": "Our paper '<a href=https://syncvp.github.io/>SyncVP</a>: Joint Diffusion for Synchronous Multi-Modal Video Prediction' has been accepted at <strong>CVPR 2025</strong>!"
+    },
+    {
+      "date": "Mar. 2024",
+      "text": "Started my PhD at the University of Bonn in the Computer Vision Group"
+    },
+    {
+      "date": "Feb. 2024",
+      "text": "Our <a href=https://github.com/tii-racing/drone-racing-dataset>paper</a> about a new racing drone dataset is accepted to IEEE Robotics and Automation Letters (<strong>RA-L</strong>)"
+    }
+  ]
+}

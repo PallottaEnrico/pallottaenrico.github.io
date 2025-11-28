@@ -1,0 +1,42 @@
+{
+  "_comment": "Profile Configuration - Edit this file to update your personal information",
+  
+  "name": "Enrico",
+  "surname": "Pallotta",
+  "title": "",
+  "position": "PhD Student",
+  "tagline": "Working on Video Generative models",
+  
+  "profile_image": "images/profile_pic.jpg",
+  
+  "about": {
+    "lead": "I'm currently a Ph.D. student in Computer Vision at the University of Bonn, advised by <a href=https://scholar.google.com/citations?user=1CLaPMEAAAAJ&hl=it>Prof. Dr. Jürgen Gall</a>.",
+    "paragraphs": [
+      "My research focuses on video generation and prediction, multi-modal learning, and world models.",
+      "I'm also working on agriculture application of video prediction models for crop monitoring and forecasting as part of the <a href=https://aid4crops.uni-bonn.de/index.html>AID4Crops project</a>."
+    ]
+  },
+  
+  "contact": {
+    "email": "epallott@uni-bonn.de",
+    "location": {
+      "department": "Department of Computer Science",
+      "institution": "University of Bonn"
+    }
+  },
+  
+  "social": {
+    "github": "https://github.com/PallottaEnrico",
+    "linkedin": "https://www.linkedin.com/in/enrico-pallotta/",
+    "cv": "CV-10-2025.pdf",
+    "google_scholar": "https://scholar.google.com/citations?user=zzvlqywAAAAJ&hl=it",
+    "orcid": "",
+    "researchgate": "",
+    "website": ""
+  },
+  
+  "footer": {
+    "copyright_name": "Enrico Pallotta",
+    "note": ""
+  }
+}

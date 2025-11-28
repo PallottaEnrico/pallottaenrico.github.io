@@ -1,0 +1,72 @@
+{
+  "_comment": "Publications Configuration - Edit this file to manage your publications list",
+  
+  "publications": [
+    {
+      "id": 1,
+      "title": "EgoControl: Controllable Egocentric Video Generation via 3D Full-Body Poses",
+      "authors": "<strong>E. Pallotta*</strong>, S.M. Azar*, L. Doorenbos, S. Ozsoy, U. Iqbal, J. Gall",
+      "venue": "Preprint",
+      "year": 2025,
+      "description": "We present EgoControl, a novel framework for controllable egocentric video generation using 3D full-body poses, enabling realistic and diverse video synthesis from user-defined motion trajectories.",
+      "image": "images/egocontrol.png",
+      "links": {
+        "paper": "https://arxiv.org/abs/2511.18173",
+        "code": "https://github.com/CVG-Bonn/EgoControl/tree/main",
+        "page": "https://cvg-bonn.github.io/EgoControl/"
+      }
+    },
+    {
+      "id": 2,
+      "title": "Sequence-Adaptive Video Prediction in Continuous Streams using Diffusion Noise Optimization",
+      "authors": "S.M. Azar, E. Bahrami, <strong>E. Pallotta</strong>, G. Francesca, R. Timofte, J. Gall",
+      "venue": "Preprint",
+      "year": 2025,
+      "description": "We introduce SAVIDNO, a novel approach for video prediction in continuous streams that optimizes diffusion noise to adaptively enhance prediction accuracy over time.",
+      "image": "images/savidno.png",
+      "links": {
+        "paper": "https://arxiv.org/pdf/2511.18255"
+      }
+    },
+    {
+      "id": 3,
+      "title": "SyncVP: Joint Diffusion for Synchronous Multi-Modal Video Prediction",
+      "authors": "<strong>E. Pallotta</strong>, S.M. Azar, S. Li, O. Zatsarynna, J. Gall",
+      "venue": "CVPR",
+      "year": 2025,
+      "description": "We propose SyncVP, a novel diffusion-based model for simultaneous video prediction across multiple modalities, achieving state-of-the-art results on benchmark datasets.",
+      "image": "images/teaser_syncvp.png",
+      "links": {
+        "paper": "https://arxiv.org/abs/2503.18933",
+        "code": "https://github.com/PallottaEnrico/SyncVP",
+        "page": "https://syncvp.github.io/"
+      }
+    },
+    {
+      "id": 4,
+      "title": "Race Against the Machine: a Fully-annotated, Open-design Dataset of Autonomous and Piloted High-speed Flight",
+      "authors": "M. Bosello, D. Aguiari, Y. Keuter, <strong>E. Pallotta</strong>, S. Kiade, G. Caminati, F. Pinzarrone, J. Halepota, J. Panerati, G. Pau",
+      "venue": "RA-L",
+      "year": 2024,
+      "description": "We present a comprehensive dataset for high-speed drone racing, featuring both autonomous and piloted flights, complete with detailed annotations to facilitate research in robotics and autonomous systems.",
+      "image": "images/drone_dataset.png",
+      "links": {
+        "paper": "https://ieeexplore.ieee.org/document/10452776",
+        "code": "https://github.com/tii-racing/drone-racing-dataset"
+      }
+    },
+    {
+      "id": 5,
+      "title": "TeamUnibo at SemEval-2023 Task 6: A transformer based approach to Rhetorical Roles prediction and NER in Legal Texts",
+      "authors": "Y. Noviello*, <strong>E. Pallotta*</strong>, F. Pinzarrone*, G. Tanzi*",
+      "venue": "SemEval@ACL",
+      "year": 2023,
+      "description": "This paper details TeamUnibo's approach to SemEval-2023 Task 6, utilizing transformer-based models for effective prediction of rhetorical roles and named entity recognition in legal documents.",
+      "image": "images/semeval.png",
+      "links": {
+        "paper": "https://aclanthology.org/2023.semeval-1.37.pdf",
+        "code": "https://github.com/PallottaEnrico/LegalEval"
+      }
+    }
+  ]
+}
