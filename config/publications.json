@@ -6,8 +6,8 @@
       "id": 1,
       "title": "EgoControl: Controllable Egocentric Video Generation via 3D Full-Body Poses",
       "authors": "<strong>E. Pallotta*</strong>, S.M. Azar*, L. Doorenbos, S. Ozsoy, U. Iqbal, J. Gall",
-      "venue": "Preprint",
-      "year": 2025,
+      "venue": "CVPR",
+      "year": 2026,
       "description": "We present EgoControl, a novel framework for controllable egocentric video generation using 3D full-body poses, enabling realistic and diverse video synthesis from user-defined motion trajectories.",
       "image": "images/egocontrol.png",
       "links": {
