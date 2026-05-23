@@ -10,11 +10,12 @@ A clean, minimalist academic portfolio website designed for researchers and acad
 - **News Section**: Bullet list of recent updates with expand/collapse functionality
 - **Smooth Animations**: Subtle scroll animations and transitions
 - **JSON Configuration**: Easy content management through config files (no HTML editing required!)
+- **GitHub Stars Badge**: Live total GitHub star count displayed in the hero section, automatically updated daily via GitHub Actions
 - **GitHub Pages Ready**: Designed to be hosted on GitHub Pages
 
 ## Sections
 
-1. **Hero**: Introduction with name, title, and profile image
+1. **Hero**: Introduction with name, title, profile image, and GitHub stars badge
 2. **About**: Biography with recent news
 3. **Publications**: Grid of research papers with venue, description, and links
 4. **Contact**: Email, location, and social media links
@@ -101,6 +102,21 @@ This file contains all your publications.
   ]
 }
 ```
+
+### `config/external_repos.json` - External Repositories for Star Count
+
+This file lists repositories not owned by you that should be included in the total GitHub star count (e.g. repos you contributed to significantly).
+
+```json
+[
+  "org/repo-name",
+  "another-org/another-repo"
+]
+```
+
+The star count is fetched daily by a GitHub Actions workflow (`.github/workflows/update_stars.yml`) and written to `stars_data.json` at the repo root. The badge is displayed automatically in the hero section once the workflow has run at least once.
+
+> **Note:** The workflow requires the `workflow` scope on your Personal Access Token to push changes to `.github/workflows/`.
 
 ### `config/news.json` - News/Updates
 
