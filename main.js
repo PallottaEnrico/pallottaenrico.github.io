@@ -10,13 +10,15 @@
 const CONFIG_PATHS = {
     profile: 'config/profile.json',
     publications: 'config/publications.json',
-    news: 'config/news.json'
+    news: 'config/news.json',
+    stars: 'stars_data.json'
 };
 
 // Global state
 let profileData = null;
 let publicationsData = null;
 let newsData = null;
+let starsData = null;
 let newsExpanded = false;
 
 // ==========================================
@@ -39,6 +41,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         
         // Render content from config
         renderProfile();
+        renderStars();
         renderNews();
         renderPublications();
         renderContact();
@@ -58,12 +61,13 @@ document.addEventListener('DOMContentLoaded', async () => {
 // ==========================================
 
 async function loadConfigurations() {
-    const [profileResponse, publicationsResponse, newsResponse] = await Promise.all([
+    const [profileResponse, publicationsResponse, newsResponse, starsResponse] = await Promise.all([
         fetch(CONFIG_PATHS.profile),
         fetch(CONFIG_PATHS.publications),
-        fetch(CONFIG_PATHS.news)
+        fetch(CONFIG_PATHS.news),
+        fetch(CONFIG_PATHS.stars).catch(() => null)
     ]);
-    
+
     if (!profileResponse.ok) {
         throw new Error(`Failed to load profile config: ${profileResponse.status}`);
     }
@@ -73,10 +77,13 @@ async function loadConfigurations() {
     if (!newsResponse.ok) {
         throw new Error(`Failed to load news config: ${newsResponse.status}`);
     }
-    
+
     profileData = await profileResponse.json();
     publicationsData = await publicationsResponse.json();
     newsData = await newsResponse.json();
+    if (starsResponse && starsResponse.ok) {
+        starsData = await starsResponse.json();
+    }
 }
 
 // ==========================================
@@ -222,6 +229,28 @@ function renderProfile() {
             });
         }
     }
+}
+
+// ==========================================
+// Render Stars Badge
+// ==========================================
+
+function renderStars() {
+    const heroStars = document.getElementById('hero-stars');
+    if (!heroStars || !starsData || !starsData.message || starsData.message === '0') return;
+
+    const badge = document.createElement('span');
+    badge.className = 'stars-badge';
+
+    badge.innerHTML = `
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+        </svg>
+        <span class="stars-count">${escapeHtml(starsData.message)}</span>
+        <span class="stars-label">GitHub Stars</span>
+    `;
+
+    heroStars.appendChild(badge);
 }
 
 // ==========================================
