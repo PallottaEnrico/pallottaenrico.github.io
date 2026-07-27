@@ -1,9 +1,23 @@
 {
   "_comment": "Publications Configuration - Edit this file to manage your publications list",
-  
+
   "publications": [
     {
-      "id": 1,
+      "id": 6,
+      "title": "ContactFlow: A Video Action Conditioning that Transfers Across Embodiments",
+      "authors": "S. Azirar, <strong>E. Pallotta</strong>, J. Nogga, J. Gall, S. Behnke, H. Blum",
+      "venue": "Preprint",
+      "year": 2026,
+      "description": "ContactFlow is an embodiment-agnostic action representation that describes manipulation through trajectories of 3D contact points - shared by hands, grippers, and robots.",
+      "image": "images/agibot.mp4",
+      "links": {
+        "paper": "",
+        "code": "",
+        "page": "https://rpl-bonn.github.io/contactflow/"
+      }
+    },
+    {
+      "id": 5,
       "title": "EgoControl: Controllable Egocentric Video Generation via 3D Full-Body Poses",
       "authors": "<strong>E. Pallotta*</strong>, S.M. Azar*, L. Doorenbos, S. Ozsoy, U. Iqbal, J. Gall",
       "venue": "CVPR",
@@ -17,7 +31,7 @@
       }
     },
     {
-      "id": 2,
+      "id": 3,
       "title": "Sequence-Adaptive Video Prediction in Continuous Streams using Diffusion Noise Optimization",
       "authors": "S.M. Azar, E. Bahrami, <strong>E. Pallotta</strong>, G. Francesca, R. Timofte, J. Gall",
       "venue": "Preprint",
@@ -29,7 +43,7 @@
       }
     },
     {
-      "id": 3,
+      "id": 4,
       "title": "SyncVP: Joint Diffusion for Synchronous Multi-Modal Video Prediction",
       "authors": "<strong>E. Pallotta</strong>, S.M. Azar, S. Li, O. Zatsarynna, J. Gall",
       "venue": "CVPR",
@@ -43,7 +57,7 @@
       }
     },
     {
-      "id": 4,
+      "id": 2,
       "title": "Race Against the Machine: a Fully-annotated, Open-design Dataset of Autonomous and Piloted High-speed Flight",
       "authors": "M. Bosello, D. Aguiari, Y. Keuter, <strong>E. Pallotta</strong>, S. Kiade, G. Caminati, F. Pinzarrone, J. Halepota, J. Panerati, G. Pau",
       "venue": "RA-L",
@@ -56,7 +70,7 @@
       }
     },
     {
-      "id": 5,
+      "id": 1,
       "title": "TeamUnibo at SemEval-2023 Task 6: A transformer based approach to Rhetorical Roles prediction and NER in Legal Texts",
       "authors": "Y. Noviello*, <strong>E. Pallotta*</strong>, F. Pinzarrone*, G. Tanzi*",
       "venue": "SemEval@ACL",
