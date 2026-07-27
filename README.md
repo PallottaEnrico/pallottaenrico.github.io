@@ -82,6 +82,9 @@ This file contains all your personal information, about me content, and social l
 
 This file contains all your publications.
 
+Publication previews support static images, animated GIFs, and MP4 videos. MP4
+previews play automatically without sound and loop inline.
+
 ```json
 {
   "publications": [
@@ -92,7 +95,7 @@ This file contains all your publications.
       "venue": "Nature Machine Intelligence",
       "year": 2024,
       "description": "Brief description of your work...",
-      "image": "",
+      "image": "images/publication-preview.mp4",
       "links": {
         "paper": "https://paper-url.com",
         "code": "https://github.com/repo",

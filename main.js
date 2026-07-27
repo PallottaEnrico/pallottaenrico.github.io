@@ -325,7 +325,10 @@ function renderPublications() {
     
     if (publicationsGrid && publicationsData && publicationsData.publications) {
         publicationsGrid.innerHTML = '';
-        publicationsData.publications.forEach(pub => {
+        const sortedPublications = [...publicationsData.publications]
+            .sort((a, b) => Number(b.id) - Number(a.id));
+
+        sortedPublications.forEach(pub => {
             const card = createPublicationCard(pub);
             publicationsGrid.appendChild(card);
         });
@@ -353,10 +356,26 @@ function createPublicationCard(publication) {
     imageDiv.className = 'publication-image';
     
     if (publication.image) {
-        const img = document.createElement('img');
-        img.src = publication.image;
-        img.alt = escapeHtml(publication.title);
-        imageDiv.appendChild(img);
+        const mediaPath = publication.image;
+        const mediaExtension = mediaPath.split(/[?#]/, 1)[0].split('.').pop().toLowerCase();
+
+        if (mediaExtension === 'mp4') {
+            const video = document.createElement('video');
+            video.src = mediaPath;
+            video.setAttribute('aria-label', publication.title || 'Publication preview');
+            video.autoplay = true;
+            video.loop = true;
+            video.muted = true;
+            video.playsInline = true;
+            video.preload = 'metadata';
+            imageDiv.appendChild(video);
+        } else {
+            const img = document.createElement('img');
+            img.src = mediaPath;
+            img.alt = publication.title || 'Publication preview';
+            img.loading = 'lazy';
+            imageDiv.appendChild(img);
+        }
     } else {
         imageDiv.innerHTML = `<svg class="publication-image-placeholder" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1">
             <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
