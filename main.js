@@ -207,6 +207,18 @@ function renderProfile() {
     if (heroSocialLinks && profileData.social) {
         heroSocialLinks.innerHTML = '';
         renderSocialLinks(heroSocialLinks, profileData.social, 'hero-social-link');
+
+        const contactLink = document.createElement('a');
+        contactLink.href = '#contact';
+        contactLink.className = 'btn btn-secondary hero-contact-link';
+        contactLink.textContent = 'Get in Touch';
+
+        const cvLink = heroSocialLinks.querySelector('[data-social="cv"]');
+        if (cvLink) {
+            cvLink.insertAdjacentElement('afterend', contactLink);
+        } else {
+            heroSocialLinks.appendChild(contactLink);
+        }
     }
     
     // About section
@@ -479,6 +491,7 @@ function renderSocialLinks(container, socialData, className) {
             link.target = '_blank';
             link.rel = 'noopener noreferrer';
             link.className = className;
+            link.dataset.social = key;
             link.setAttribute('aria-label', socialLabels[key] || key);
             link.innerHTML = socialIcons[key];
             container.appendChild(link);
@@ -759,8 +772,8 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         const targetElement = document.querySelector(targetId);
         
         if (targetElement) {
-            const navbarHeight = navbar ? navbar.offsetHeight : 0;
-            const targetPosition = targetElement.offsetTop - navbarHeight;
+            const navbarOffset = navbar ? navbar.getBoundingClientRect().bottom + 12 : 0;
+            const targetPosition = targetElement.getBoundingClientRect().top + window.scrollY - navbarOffset;
             
             window.scrollTo({
                 top: targetPosition,

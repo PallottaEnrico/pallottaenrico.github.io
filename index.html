@@ -15,10 +15,8 @@
     <!-- Navigation -->
     <nav class="navbar" id="navbar">
         <div class="nav-container">
-            <a href="#home" class="nav-logo">Portfolio</a>
+            <a href="#home" class="nav-logo">Enrico Pallotta</a>
             <ul class="nav-menu" id="nav-menu">
-                <li><a href="#home" class="nav-link">Home</a></li>
-                <li><a href="#about" class="nav-link">About</a></li>
                 <li><a href="#publications" class="nav-link">Publications</a></li>
                 <li><a href="#contact" class="nav-link">Contact</a></li>
             </ul>
@@ -30,93 +28,92 @@
         </div>
     </nav>
 
-    <!-- Hero Section with About -->
-    <section id="home" class="hero">
-        <div class="hero-content">
-            <!-- Left Side: Profile and Introduction -->
-            <div class="hero-intro">
-                <div class="hero-profile">
-                    <div class="profile-image-placeholder" id="profile-image">
-                        <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-                            <circle cx="50" cy="35" r="20" fill="#E5E7EB"/>
-                            <ellipse cx="50" cy="85" rx="35" ry="25" fill="#E5E7EB"/>
-                        </svg>
+    <main class="portfolio-layout">
+        <div class="portfolio-sidebar">
+            <!-- Hero Section with About -->
+            <section id="home" class="hero">
+                <div class="hero-content">
+                    <!-- Profile and Introduction -->
+                    <div class="hero-intro">
+                        <div class="hero-profile">
+                            <div class="profile-image-placeholder" id="profile-image">
+                                <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="50" cy="35" r="20" fill="#E5E7EB"/>
+                                    <ellipse cx="50" cy="85" rx="35" ry="25" fill="#E5E7EB"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="hero-text">
+                            <p class="hero-greeting">Hello, I'm</p>
+                            <h1 class="hero-title" id="hero-name">Loading...</h1>
+                            <p class="hero-subtitle" id="hero-position">Loading...</p>
+                            <p class="hero-description" id="hero-tagline">Loading...</p>
+                            <div class="hero-social-links" id="hero-social-links">
+                                <!-- Social links will be populated from config -->
+                            </div>
+                            <div class="hero-stars" id="hero-stars"></div>
+                            <div class="hero-cta">
+                                <a href="#publications" class="btn btn-primary view-publications-btn">View Publications</a>
+                            </div>
+                        </div>
                     </div>
-                </div>
-                <div class="hero-text">
-                    <p class="hero-greeting">Hello, I'm</p>
-                    <h1 class="hero-title" id="hero-name">Loading...</h1>
-                    <p class="hero-subtitle" id="hero-position">Loading...</p>
-                    <p class="hero-description" id="hero-tagline">Loading...</p>
-                    <div class="hero-social-links" id="hero-social-links">
-                        <!-- Social links will be populated from config -->
-                    </div>
-                    <div class="hero-stars" id="hero-stars"></div>
-                    <div class="hero-cta">
-                        <a href="#publications" class="btn btn-primary">View Publications</a>
-                        <a href="#contact" class="btn btn-secondary">Get in Touch</a>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Right Side: About Me -->
-            <section id="about" class="hero-about">
-                <h2 class="about-title">About Me</h2>
-                <div class="about-text" id="about-text">
-                    <p class="about-lead">Loading...</p>
-                </div>
-                
-                <!-- News Section -->
-                <div class="news-section" id="news-section">
-                    <h3 class="news-title">News</h3>
-                    <ul class="news-list" id="news-list">
-                        <!-- News items will be populated from config -->
-                    </ul>
-                    <button class="news-expand-btn" id="news-expand-btn" style="display: none;">
-                        Show more
-                    </button>
+
+                    <!-- About Me and News -->
+                    <section id="about" class="hero-about">
+                        <h2 class="about-title">About Me</h2>
+                        <div class="about-text" id="about-text">
+                            <p class="about-lead">Loading...</p>
+                        </div>
+
+                        <!-- News Section -->
+                        <div class="news-section" id="news-section">
+                            <h3 class="news-title">News</h3>
+                            <ul class="news-list" id="news-list">
+                                <!-- News items will be populated from config -->
+                            </ul>
+                            <button class="news-expand-btn" id="news-expand-btn" style="display: none;">
+                                Show more
+                            </button>
+                        </div>
+                    </section>
                 </div>
             </section>
         </div>
-        <div class="scroll-indicator">
-            <span>Scroll to explore</span>
-            <div class="scroll-arrow"></div>
-        </div>
-    </section>
 
-    <!-- Publications Section -->
-    <section id="publications" class="publications">
-        <div class="container">
-            <h2 class="section-title">Publications</h2>
-            <p class="section-subtitle">A selection of my recent research work</p>
-            
-            <div class="publications-grid" id="publications-grid">
-                <!-- Publication cards will be dynamically inserted here -->
-            </div>
-            
-            <div class="publications-cta" id="publications-cta">
-                <!-- Google Scholar link will be populated from config -->
-            </div>
-        </div>
-    </section>
+        <!-- Publications Section -->
+        <section id="publications" class="publications">
+            <div class="container">
+                <h2 class="section-title">Publications</h2>
+                <p class="section-subtitle">A selection of my recent research work</p>
 
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <div class="container">
-            <h2 class="section-title">Get in Touch</h2>
-            <p class="section-subtitle">Interested in collaboration? Let's connect.</p>
-            
-            <div class="contact-content">
-                <div class="contact-info" id="contact-info">
-                    <!-- Contact items will be populated from config -->
+                <div class="publications-grid" id="publications-grid">
+                    <!-- Publication cards will be dynamically inserted here -->
                 </div>
-                
-                <div class="social-links" id="social-links">
-                    <!-- Social links will be populated from config -->
+
+                <div class="publications-cta" id="publications-cta">
+                    <!-- Google Scholar link will be populated from config -->
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact">
+            <div class="container">
+                <h2 class="section-title">Get in Touch</h2>
+                <p class="section-subtitle">Interested in collaboration? Let's connect.</p>
+
+                <div class="contact-content">
+                    <div class="contact-info" id="contact-info">
+                        <!-- Contact items will be populated from config -->
+                    </div>
+
+                    <div class="social-links" id="social-links">
+                        <!-- Social links will be populated from config -->
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
 
     <!-- Footer -->
     <footer class="footer">

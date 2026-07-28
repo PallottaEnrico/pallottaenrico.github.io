@@ -41,7 +41,7 @@
     
     /* Layout */
     --container-max: 1200px;
-    --navbar-height: 64px;
+    --navbar-height: 56px;
     
     /* Transitions */
     --transition-fast: 150ms ease;
@@ -199,21 +199,23 @@ section {
     left: 0;
     right: 0;
     height: var(--navbar-height);
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: rgba(255, 255, 255, 0.88);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(210, 210, 215, 0.65);
+    box-shadow: var(--shadow-sm);
     z-index: 1000;
     transition: all var(--transition-base);
 }
 
 .navbar.scrolled {
-    box-shadow: var(--shadow-sm);
+    background-color: rgba(255, 255, 255, 0.95);
+    box-shadow: var(--shadow-md);
 }
 
 .nav-container {
-    max-width: var(--container-max);
-    margin: 0 auto;
-    padding: 0 var(--spacing-md);
+    width: 100%;
+    padding: 0 clamp(var(--spacing-md), 4vw, var(--spacing-xl));
     height: 100%;
     display: flex;
     align-items: center;
@@ -232,10 +234,12 @@ section {
 
 .nav-menu {
     display: flex;
-    gap: var(--spacing-lg);
+    gap: var(--spacing-md);
 }
 
 .nav-link {
+    position: relative;
+    padding: 17px 0 15px;
     color: var(--color-text-secondary);
     font-size: var(--font-size-sm);
     font-weight: 500;
@@ -245,6 +249,24 @@ section {
 .nav-link:hover,
 .nav-link.active {
     color: var(--color-text);
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    bottom: 9px;
+    left: 0;
+    height: 2px;
+    background: var(--color-primary);
+    border-radius: var(--radius-full);
+    transform: scaleX(0);
+    transition: transform var(--transition-fast);
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+    transform: scaleX(1);
 }
 
 .nav-toggle {
@@ -268,32 +290,42 @@ section {
    Hero Section
    ========================================== */
 
-.hero {
-    min-height: 100vh;
+.portfolio-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 2fr) minmax(0, 3fr);
+    grid-template-rows: auto 1fr;
+    align-items: start;
+    gap: clamp(var(--spacing-md), 3vw, var(--spacing-xl));
+    width: 100%;
+    padding: calc(var(--navbar-height) + var(--spacing-lg)) clamp(var(--spacing-md), 4vw, var(--spacing-xl)) var(--spacing-xl);
+    background: var(--color-background-tinted);
+}
+
+.portfolio-sidebar {
+    grid-column: 1;
+    grid-row: 1;
+    min-width: 0;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    padding-top: var(--navbar-height);
-    background: linear-gradient(135deg, var(--color-accent) 0%, var(--color-background) 50%, var(--color-accent-mint) 100%);
+    gap: var(--spacing-lg);
+}
+
+.hero {
+    padding: 0;
+    background: transparent;
     position: relative;
 }
 
 .hero-content {
-    max-width: var(--container-max);
-    margin: 0 auto;
-    padding: 0 var(--spacing-md);
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: var(--spacing-2xl);
-    align-items: start;
-    flex: 1;
-    align-content: center;
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-lg);
 }
 
 .hero-intro {
     display: flex;
     flex-direction: column;
-    gap: var(--spacing-lg);
+    gap: var(--spacing-md);
 }
 
 .hero-profile {
@@ -302,8 +334,8 @@ section {
 }
 
 .profile-image-placeholder {
-    width: 200px;
-    height: 200px;
+    width: 160px;
+    height: 160px;
     border-radius: 50%;
     background: linear-gradient(135deg, var(--color-primary-light) 0%, var(--color-border) 100%);
     display: flex;
@@ -332,7 +364,7 @@ section {
 }
 
 .hero-title {
-    font-size: var(--font-size-4xl);
+    font-size: clamp(var(--font-size-2xl), 4vw, var(--font-size-4xl));
     font-weight: 700;
     letter-spacing: -0.03em;
     line-height: 1.1;
@@ -351,7 +383,7 @@ section {
 }
 
 .hero-description {
-    font-size: var(--font-size-lg);
+    font-size: var(--font-size-base);
     color: var(--color-text-secondary);
     max-width: 500px;
     margin-bottom: var(--spacing-lg);
@@ -360,8 +392,16 @@ section {
 
 .hero-social-links {
     display: flex;
+    align-items: center;
+    flex-wrap: wrap;
     gap: var(--spacing-sm);
     margin-bottom: var(--spacing-md);
+}
+
+.hero-contact-link {
+    min-height: 40px;
+    padding: 8px var(--spacing-sm);
+    font-size: var(--font-size-sm);
 }
 
 .hero-social-link {
@@ -435,10 +475,14 @@ section {
     flex-wrap: wrap;
 }
 
+.view-publications-btn {
+    display: none;
+}
+
 /* Hero About Section (Right Side) */
 .hero-about {
     background: var(--color-white);
-    padding: var(--spacing-lg);
+    padding: var(--spacing-md);
     border-radius: var(--radius-lg);
     box-shadow: var(--shadow-md);
     border: 1px solid var(--color-primary-border);
@@ -589,12 +633,32 @@ section {
    ========================================== */
 
 .publications {
-    background: linear-gradient(180deg, var(--color-background) 0%, var(--color-accent) 100%);
+    grid-column: 2;
+    grid-row: 1 / span 2;
+    min-width: 0;
+    padding: 0;
+    background: transparent;
+}
+
+.publications > .container {
+    max-width: none;
+    padding: 0;
+}
+
+.publications .section-title,
+.publications .section-subtitle {
+    text-align: left;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.publications .section-subtitle {
+    margin-bottom: var(--spacing-lg);
 }
 
 .publications-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    grid-template-columns: minmax(0, 1fr);
     gap: var(--spacing-md);
     margin-bottom: var(--spacing-xl);
 }
@@ -606,7 +670,9 @@ section {
     box-shadow: var(--shadow-sm);
     transition: all var(--transition-base);
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    min-height: 260px;
+    border: 1px solid var(--color-primary-border);
 }
 
 .publication-card:hover {
@@ -615,8 +681,10 @@ section {
 }
 
 .publication-image {
-    width: 100%;
-    height: 200px;
+    flex: 0 0 38%;
+    width: 38%;
+    height: auto;
+    min-height: 260px;
     overflow: hidden;
     background: linear-gradient(135deg, var(--color-background-alt) 0%, var(--color-border) 100%);
     display: flex;
@@ -641,6 +709,7 @@ section {
 
 .publication-content {
     padding: var(--spacing-md);
+    min-width: 0;
     flex: 1;
     display: flex;
     flex-direction: column;
@@ -705,32 +774,61 @@ section {
    ========================================== */
 
 .contact {
-    background: linear-gradient(180deg, var(--color-accent) 0%, var(--color-background) 100%);
+    grid-column: 1;
+    grid-row: 2;
+    align-self: start;
+    padding: var(--spacing-md);
+    background: var(--color-white);
+    border: 1px solid var(--color-primary-border);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-sm);
+}
+
+.portfolio-layout > .contact > .container {
+    max-width: none;
+    padding: 0;
+}
+
+.portfolio-layout > .contact .section-title,
+.portfolio-layout > .contact .section-subtitle {
+    text-align: left;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.portfolio-layout > .contact .section-title {
+    font-size: var(--font-size-xl);
+    margin-bottom: var(--spacing-xs);
+}
+
+.portfolio-layout > .contact .section-subtitle {
+    font-size: var(--font-size-sm);
+    margin-bottom: var(--spacing-md);
 }
 
 .contact-content {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    gap: var(--spacing-xl);
+    align-items: stretch;
+    gap: var(--spacing-md);
 }
 
 .contact-info {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: var(--spacing-lg);
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xs);
     width: 100%;
-    max-width: 900px;
+    max-width: none;
 }
 
 .contact-item {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 36px minmax(0, 1fr);
     align-items: center;
-    text-align: center;
-    padding: var(--spacing-lg);
-    background: var(--color-white);
-    border-radius: var(--radius-lg);
+    text-align: left;
+    padding: var(--spacing-xs);
+    background: var(--color-background-tinted);
+    border-radius: var(--radius-sm);
     transition: transform var(--transition-base);
     border: 1px solid var(--color-primary-border);
     box-shadow: var(--shadow-sm);
@@ -741,9 +839,9 @@ section {
 }
 
 .contact-icon {
-    width: 48px;
-    height: 48px;
-    margin-bottom: var(--spacing-sm);
+    width: 24px;
+    height: 24px;
+    margin-bottom: 0;
     color: var(--color-primary);
 }
 
@@ -766,7 +864,7 @@ section {
 
 .social-links {
     display: flex;
-    gap: var(--spacing-md);
+    gap: var(--spacing-sm);
 }
 
 .social-link {
@@ -848,9 +946,17 @@ section {
         --font-size-2xl: 32px;
     }
     
-    .hero-content {
-        grid-template-columns: 1fr;
-        gap: var(--spacing-xl);
+    .portfolio-layout {
+        display: block;
+    }
+
+    .hero,
+    .publications {
+        padding: 0;
+    }
+
+    .publications {
+        margin-top: var(--spacing-xl);
     }
     
     .hero-intro {
@@ -879,6 +985,13 @@ section {
         max-width: 600px;
         margin: 0 auto;
     }
+
+    .publications .section-title,
+    .publications .section-subtitle {
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
     
     .about-title::after {
         left: 50%;
@@ -897,7 +1010,10 @@ section {
     
     .contact-info {
         grid-template-columns: 1fr;
-        max-width: 400px;
+    }
+
+    .portfolio-layout > .contact .contact-info {
+        max-width: none;
     }
 }
 
@@ -910,6 +1026,10 @@ section {
         --spacing-2xl: 64px;
     }
     
+    .portfolio-layout {
+        padding-top: calc(var(--navbar-height) + var(--spacing-md));
+    }
+
     .nav-menu {
         position: fixed;
         top: var(--navbar-height);
@@ -950,6 +1070,21 @@ section {
     
     .publications-grid {
         grid-template-columns: 1fr;
+    }
+
+    .view-publications-btn {
+        display: inline-flex;
+    }
+
+    .publication-card {
+        flex-direction: column;
+    }
+
+    .publication-image {
+        flex-basis: auto;
+        width: 100%;
+        height: 220px;
+        min-height: 220px;
     }
     
     .scroll-indicator {
