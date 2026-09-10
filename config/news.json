@@ -3,6 +3,10 @@
   
   "news": [
     {
+      "date": "Sep. 2026",
+      "text": "<a href=https://cvg-bonn.github.io/EgoControl/>EgoControl</a> has been awarded Outstanding Paper Award at <strong>ECCV 2026</strong> <a href=https://human-motion-world-model.github.io/><strong>HuMoWM</strong></a> workshop and <a href=https://uniworld-ai.github.io/><strong>UniWorld</strong> workshop</a>"
+    },
+    {
       "date": "Feb. 2026",
       "text": "\uD83C\uDF1F Our latest work has been accepted to <strong>CVPR 2026</strong>! '<a href=https://cvg-bonn.github.io/EgoControl/>EgoControl</a>: Controllable Egocentric Video Generation via 3D Full-Body Poses'"
     },
