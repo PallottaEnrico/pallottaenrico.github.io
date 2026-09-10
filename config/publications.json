@@ -11,7 +11,7 @@
       "description": "ContactFlow is an embodiment-agnostic action representation that describes manipulation through trajectories of 3D contact points - shared by hands, grippers, and robots.",
       "image": "images/agibot.mp4",
       "links": {
-        "paper": "",
+        "paper": "https://arxiv.org/abs/2607.26579",
         "code": "",
         "page": "https://rpl-bonn.github.io/contactflow/"
       }
