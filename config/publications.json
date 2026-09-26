@@ -34,8 +34,8 @@
       "id": 3,
       "title": "Sequence-Adaptive Video Prediction in Continuous Streams using Diffusion Noise Optimization",
       "authors": "S.M. Azar, E. Bahrami, <strong>E. Pallotta</strong>, G. Francesca, R. Timofte, J. Gall",
-      "venue": "Preprint",
-      "year": 2025,
+      "venue": "CVIU",
+      "year": 2026,
       "description": "We introduce SAVIDNO, a novel approach for video prediction in continuous streams that optimizes diffusion noise to adaptively enhance prediction accuracy over time.",
       "image": "images/savidno.png",
       "links": {
